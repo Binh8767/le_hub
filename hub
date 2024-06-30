@@ -5,18 +5,14 @@ local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0.4, 0, 0.4, 0)
 frame.Position = UDim2.new(0.35, 0, 0.28, 0)
 frame.BackgroundColor3 = Color3.new(0, 0, 0)
-frame.BorderColor3 = Color3.new(255, 255, 0) -- Màu viền
-frame.BorderSizePixel = 3 -- Độ dày của viền
+frame.BorderColor3 = Color3.new(255, 255, 0)
+frame.BorderSizePixel = 3
 frame.Parent = screenGui
  
--- Các thành phần khác của GUI (đã được giữ nguyên)
- 
- 
--- Nút đóng GUI (dấu X)
 local closeButton = Instance.new("TextButton")
 closeButton.Size = UDim2.new(0.1, 0.0, 0.2, 0)
 closeButton.Position = UDim2.new(0.9, 0, 0., 0)
-closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Màu đỏ
+closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 closeButton.Text = "X"
 closeButton.TextColor3 = Color3.new(1, 1, 1)
 closeButton.Font = Enum.Font.GothamBlack
@@ -26,15 +22,13 @@ closeButton.Parent = frame
 local imageLabel = Instance.new("ImageLabel")
 imageLabel.Size = UDim2.new(0.275, 0, 0.55, 0)
 imageLabel.Position = UDim2.new(0.01, 0., 0.3, 0)
-imageLabel.BackgroundColor3 = Color3.new(1, 1, 1)  -- Màu nền của hình ảnh (nếu có)
-imageLabel.Image = "rbxassetid://18245639809"  -- ID của hình ảnh trong Roblox Asset
+imageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel.Image = "rbxassetid://18245639809"
 imageLabel.Parent = frame
  
--- Bo góc cho imageLabel
 local imageLabelCorner = Instance.new("UICorner")
 imageLabelCorner.CornerRadius = UDim.new(0, 8)
 imageLabelCorner.Parent = imageLabel
- 
  
 local title = Instance.new("TextLabel")
 title.Size = UDim2.new(0.8, 0, 0.2, 0)
@@ -56,7 +50,6 @@ textBox.Font = Enum.Font.GothamBlack
 textBox.TextSize = 18
 textBox.Parent = frame
  
--- Bo góc cho textBox
 local textBoxCorner = Instance.new("UICorner")
 textBoxCorner.CornerRadius = UDim.new(0, 6)
 textBoxCorner.Parent = textBox
@@ -71,7 +64,6 @@ enterKeyButton.Font = Enum.Font.GothamBlack
 enterKeyButton.TextSize = 18
 enterKeyButton.Parent = frame
  
--- Bo góc cho enterKeyButton
 local enterKeyButtonCorner = Instance.new("UICorner")
 enterKeyButtonCorner.CornerRadius = UDim.new(0, 6)
 enterKeyButtonCorner.Parent = enterKeyButton
@@ -86,7 +78,6 @@ getKeyButton.Font = Enum.Font.GothamBlack
 getKeyButton.TextSize = 18
 getKeyButton.Parent = frame
  
--- Bo góc cho getKeyButton
 local getKeyButtonCorner = Instance.new("UICorner")
 getKeyButtonCorner.CornerRadius = UDim.new(0, 6)
 getKeyButtonCorner.Parent = getKeyButton
@@ -105,7 +96,6 @@ getKeyButton.Font = Enum.Font.GothamBlack
 getKeyButton.TextSize = 18
 getKeyButton.Parent = frame
  
--- Bo góc cho getKeyButton
 local getKeyButtonCorner = Instance.new("UICorner")
 getKeyButtonCorner.CornerRadius = UDim.new(0, 6)
 getKeyButtonCorner.Parent = getKeyButton
@@ -146,7 +136,6 @@ end
  
 enterKeyButton.MouseButton1Click:Connect(enterKey)
  
--- Xử lý sự kiện đóng GUI khi nhấp vào closeButton
 closeButton.MouseButton1Click:Connect(function()
     screenGui:Destroy()
 end)
